@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.contenedor{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 1);
+    margin: 20px;
+}
+.contenedor .izquierda{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+.perfil-texto{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+
+}
+
+.perfil-texto .img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.perfil-texto .img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.perfil-texto h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+    
+}
+.informacio-de-contacto{
+    padding: 20px;
+}
+.titulo{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.informacio-de-contacto ul{
+    position: relative;
+    min-width: 250px
+}
+.informacio-de-contacto ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+    
+
+}
+
+.informacio-de-contacto ul li .icono{
+    display: inline-block;
+    width: 20px;
+    font-size: 18px;
+    color: rgb(0, 200, 220);
+    
+}
+
+.informacio-de-contacto ul li span{
+    color: #fff;
+    font-weight: 300;
+    
+    
+}
+.informacio-de-contacto-educacion ul{
+    list-style: none;
+}
+.informacio-de-contacto-educacion li{
+    margin-bottom: 15px;
+}
+.informacio-de-contacto-educacion h5{
+    color: rgb(0, 200, 220);
+    font-weight: 500;
+}
+.informacio-de-contacto-educacion h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+.informacio-de-contacto-educacion h4{
+    color: #fff;
+    font-weight: 300;
+
+}
+
+
+
+
+
+.contenedor .derecha{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+.sobremi{
+    margin-bottom: 50px;
+}
+.sobremi:last-child{
+    margin-bottom: 0;
+}
+.titulo2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+
+.sobre-mi .caja{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.sobre-mi .caja .lugar-años{
+    min-width: 150px
+}
+.sobre-mi .caja .lugar-años h5{
+    text-transform: uppercase;
+    color: rgb(46, 46, 40);
+    font-weight: 300;
+}
+
+.sobre-mi .caja .texto h4{
+    text-transform: uppercase;
+    color: #003147;
+    font-size: 16px;
+}
+
+.sobre-mi-habilidades .caja-habilidades{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.caja-habilidades h4{
+    text-transform: uppercase;
+    font-weight: 300;
+    color: rgb(46, 46, 40);
+}
+
+.caja-habilidades .porcentaje{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: rgb(225, 220, 220);
+}
+.porcentaje div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgb(120, 202, 216);
+}
+
+@media (max-width: 1000px ){
+    .contenedor{
+        margin: 10px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px){
+    .sobre-mi-habilidades .caja-habilidades{
+        grid-template-columns: 1fr;
+    }
+    .sobre-mi .caja{
+        flex-direction: column;
+    }
+    .sobre-mi .caja .lugar-años{
+        margin-bottom: 10px;
+    }
+}
